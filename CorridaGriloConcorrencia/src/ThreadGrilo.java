@@ -1,3 +1,4 @@
+//import jdk.javadoc.internal.doclets.formats.html.SourceToHTMLConverter;
 
 /**
  *
@@ -26,11 +27,10 @@ public class ThreadGrilo extends Thread{
         
         if(totalPercorrido < linhaChegada){
             
-            
-            this.grilo.pular();
-            
             this.grilo.setPulos(pulos++);
-            this.grilo.setTotalPercorrido(totalPercorrido += this.grilo.getDistanciaRandomica());
+            this.grilo.pular();
+            this.totalPercorrido += this.grilo.getDistanciaRandomica();
+            this.grilo.setTotalPercorrido(totalPercorrido);
             this.grilo.pulosTime(pulos);
             
             
@@ -50,6 +50,9 @@ public class ThreadGrilo extends Thread{
             System.out.println("-------------------------------------------------------------------------- \n" + 
                     this.grilo.getNome() + " foi o " + colocacao + "° e alcançou a linha de chegada com " + pulos + " pulos\n" +
                     "--------------------------------------------------------------------------");
+                    //if(this.colocacao == 1){
+                        //System.out.println("o time " + this.grilo.meuTime.nome + " foi o vencedor");
+                    //}
                     System.out.println("Pulos do time " + this.grilo.meuTime.nome + ": " + this.grilo.meuTime.pulosTime + " pulos");
                     this.grilo.totalP(this.totalPercorrido);
                     System.out.println("Total percorrido pelo time " + this.grilo.meuTime.nome + ": " + this.grilo.meuTime.totalP);
@@ -62,10 +65,6 @@ public class ThreadGrilo extends Thread{
         
     }
 
-   public void pulosTime(){
-       int numero = this.grilo.getTimeGrilo();
-       
-   }
 
     
     public Grilo getGrilo() {
