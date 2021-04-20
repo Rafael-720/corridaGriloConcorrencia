@@ -7,6 +7,8 @@ public class Grilo {
     private int pulos = 0;
     private int totalPercorrido = 0;
     private int timeGrilo = 0;
+    public Time meuTime;
+    public boolean vencedor = false;
 
     public Grilo(String nome){
         this.setNome(nome);
@@ -17,12 +19,25 @@ public class Grilo {
         //this.getDistanciaRandomica();
     }
 
+    public synchronized void pulosTime(int pulos){
+        this.meuTime.pulosTime += 1;
+        //this.meuTime.totalP = p;
+        //System.out.println("Pulos do time atual " + this.meuTime.pulosTime);
+    }
+    
+    public synchronized void totalP(int p){
+        this.meuTime.totalP += p;
+        //this.meuTime.totalP = p;
+        //System.out.println("Pulos do time atual " + this.meuTime.pulosTime);
+    }
+
     public int getTimeGrilo() {
         return timeGrilo;
     }
 
-    public void setTimeGrilo(int timeGrilo) {
+    public void setTimeGrilo(int timeGrilo, Time t) {
         this.timeGrilo = timeGrilo;
+        meuTime = t;
     }
 
 

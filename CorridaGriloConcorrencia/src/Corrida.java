@@ -1,4 +1,6 @@
+
 public class Corrida {
+
     private int linhaChegada;
     
     int numTimes = 0;
@@ -32,7 +34,7 @@ public class Corrida {
                 //System.out.println("Grilo adicionado no time " + time[i].nome);
                 if(griloIndex < grilos.length){
                     //adicionando grilos aos times
-                    grilos[griloIndex].setTimeGrilo(i);
+                    grilos[griloIndex].setTimeGrilo(i, time[i]);
                     time[i].adicionarGrilo(grilos[griloIndex]);
                     griloIndex++;
                 }else{

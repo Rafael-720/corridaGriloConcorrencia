@@ -8,6 +8,7 @@ public class TimeGrilos {
     int numGrilos = 0;
     int linhaChegada = 0;
     public int pulosTime = 0;
+    public int totalP = 0;
     
     //instanciando threads e definindo a quantidade
     ArrayList<ThreadGrilo> threads = new ArrayList<>();
