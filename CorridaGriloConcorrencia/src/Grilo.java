@@ -7,7 +7,7 @@ public class Grilo {
     private int pulos = 0;
     private int totalPercorrido = 0;
     private int timeGrilo = 0;
-    public Time meuTime;
+    public TimeGrilos meuTime;
     public boolean vencedor = false;
 
     public Grilo(String nome){
@@ -35,7 +35,7 @@ public class Grilo {
         return timeGrilo;
     }
 
-    public void setTimeGrilo(int timeGrilo, Time t) {
+    public void setTimeGrilo(int timeGrilo, TimeGrilos t) {
         this.timeGrilo = timeGrilo;
         meuTime = t;
     }
