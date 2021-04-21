@@ -15,7 +15,9 @@ public class Grilo {
     }
 
     public void pular(){
-        this.setDistanciaRandomica(new Random().nextInt(50));
+        Random rnd = new Random();
+        rnd.setSeed(System.currentTimeMillis());
+        this.setDistanciaRandomica(rnd.nextInt(50));
         //this.getDistanciaRandomica();
     }
 
