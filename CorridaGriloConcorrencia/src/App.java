@@ -2,7 +2,7 @@ public class App {
     public static void main(String[] args) throws Exception {
         
         //numero de grilos
-        int numGrilos = 4;
+        int numGrilos = 50;
         
         //apagar
         //ArrayList<Grilo> test = new ArrayList<Grilo>();

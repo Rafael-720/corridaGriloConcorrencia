@@ -1,5 +1,7 @@
 //import jdk.javadoc.internal.doclets.formats.html.SourceToHTMLConverter;
 
+//import jdk.javadoc.internal.doclets.formats.html.SourceToHTMLConverter;
+
 /**
  *
  * @author FAEL
@@ -46,13 +48,22 @@ public class ThreadGrilo extends Thread{
                     
             this.run();
         }else{
+            
             colocacao++;
+            if(colocacao == 1){
+                this.grilo.vencedor = true;
+            }
             System.out.println("-------------------------------------------------------------------------- \n" + 
                     this.grilo.getNome() + " foi o " + colocacao + "° e alcançou a linha de chegada com " + pulos + " pulos\n" +
                     "--------------------------------------------------------------------------");
                     //if(this.colocacao == 1){
                         //System.out.println("o time " + this.grilo.meuTime.nome + " foi o vencedor");
                     //}
+                    if(this.grilo.vencedor == true){
+                        System.out.println("#################################################################### \n"
+                         + "o time " + this.grilo.meuTime.nome + " foi o time vencedor\n" +
+                         "####################################################################");
+                    }
                     System.out.println("Pulos do time " + this.grilo.meuTime.nome + ": " + this.grilo.meuTime.pulosTime + " pulos");
                     this.grilo.totalP(this.totalPercorrido);
                     System.out.println("Total percorrido pelo time " + this.grilo.meuTime.nome + ": " + this.grilo.meuTime.totalP);
